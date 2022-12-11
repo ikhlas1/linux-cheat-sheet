@@ -1,0 +1,12 @@
+#Create the user: 
+useradd readonlyuser
+#Enter its password if you want password auth, otherwise, setup SSH keys
+
+    passwd readonlyuser
+
+#Give Read and Execution permission to the directory Owner and all its sub-folders and files
+
+    chmod -R o+rx /var/www/html/websitenamehere/
+
+#Set the home directory of the user
+   usermod -d /var/www/html/websitenamehere/ readonlyuser
